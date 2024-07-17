@@ -26,10 +26,9 @@ public class Principal {
             c.insertarCiudad(ciudad);
         }
 
-        /*
+        
         for (int i = 0; i < c.obtenerDataCiudad().size(); i++) {
             System.out.printf("%s", c.obtenerDataCiudad().get(i));
         }
-        */
     }
 }

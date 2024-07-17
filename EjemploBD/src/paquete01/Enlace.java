@@ -74,10 +74,15 @@ public class Enlace {
         try{  
             establecerConexion();
             Statement statement = obtenerConexion().createStatement();
+            
+            // Trae todos los registros de la entidad de la base de datos
             String data = "Select * from Ciudad;";
             
             ResultSet rs = statement.executeQuery(data);
             while(rs.next()){
+                // getString(El atributo en ese momento de la iteracion)
+                // Al traer esa informacion la utiliza como atributos para un
+                // objeto el cual envia al ArrayList
                 Ciudad miCiudad = new Ciudad(rs.getString("nombre"),
                 rs.getInt("poblacion"));
                 lista.add(miCiudad);
