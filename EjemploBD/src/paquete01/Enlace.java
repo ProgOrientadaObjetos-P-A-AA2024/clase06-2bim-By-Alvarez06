@@ -47,6 +47,16 @@ public class Enlace {
         try{  
             establecerConexion();
             Statement statement = obtenerConexion().createStatement();
+            /*
+            El "ciudad" del string.format es el nombre de la tabla creada en la
+            base de datos
+            
+            Toda la cadena es un comando de la base de datos
+            Insetar en (nombre de la entidad) (valores, de la tabla) valores (a,b)
+            
+            Al enviar un valor de tipo String se coloca entre comillas simples
+            ('%s')
+            */
             String data = String.format("INSERT INTO Ciudad (nombre, poblacion) "
                     + "values ('%s', %d)", ciudad.obtenerNombre(), 
                     ciudad.obtenerPoblacion());
